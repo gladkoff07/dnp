@@ -10,20 +10,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body>
+    <!-- preloader-->
+    <div class="preloader">
+      <div class="preloader__logo"><img src="img/img-logo-preloader.svg" alt=""/></div>
+      <div class="preloader__slogan">«Искусство защиты благосостояния»</div>
+    </div>
     <!-- menu-mobile-->
     <div class="menu-mobile">
-      <div class="menu-mobile__head"><img src="img/img-logo.svg" alt=""/>
-        <div class="menu-mobile__head-action">
-          <svg class="icon icon-phone">
-            <use xlink:href="svg/symbols.svg#icon-phone"></use>
-          </svg>
-          <svg class="icon icon-menu-close">
-            <use xlink:href="svg/symbols.svg#icon-menu-close"></use>
-          </svg>
-        </div>
+      <div class="menu-mobile__head">
+        <div class="menu-mobile__logo"><img src="img/img-logo.svg" alt=""/></div>
+        <div class="menu-mobile__head-action"><a class="menu-mobile__link" href="tel:+75855697525">
+            <svg class="icon icon-phone">
+              <use xlink:href="svg/symbols.svg#icon-phone"></use>
+            </svg></a><a class="menu-mobile__link js-menu-close" href="#">
+            <svg class="icon icon-menu-close">
+              <use xlink:href="svg/symbols.svg#icon-menu-close"></use>
+            </svg></a></div>
       </div>
       <div class="menu-mobile__nav"></div>
-      <div class="menu-mobile__info"></div>
+      <div class="mobile-info menu-mobile__info">
+        <div class="mobile-info__item">
+          <div class="mobile-info__item-header">Телефон:</div><a class="mobile-info__phone" href="tel:+79939730105">+ 7 993 973 0105</a>
+          <div class="mobile-info__line">Написать в <a class="mobile-info__link" href="#">Telegram</a></div>
+          <div class="mobile-info__line">Написать в <a class="mobile-info__link" href="#">WhatsApp</a></div>
+        </div>
+        <div class="mobile-info__item">
+          <div class="mobile-info__item-header">E-mail:</div><a class="mobile-info__email" href="mailto:info@praxis.com">info@praxis.com</a>
+        </div>
+      </div>
     </div>
     <!-- header-->
     <header class="header section">
@@ -35,7 +49,10 @@
         </nav>
         <!-- block phone-->
         <div class="block-phone header__block-phone">
-          <div class="block-phone__nav js-phone-action"><a class="block-phone__number" href="tel:+75855697525">+7 (585) 569-75-25</a>
+          <div class="block-phone__nav js-phone-action"><a class="block-phone__number" href="tel:+74993254496"><span class="block-phone__number-icon">
+                <svg class="icon icon-phone">
+                  <use xlink:href="svg/symbols.svg#icon-phone"></use>
+                </svg></span><span class="block-phone__number-text">+7 (499) 325-44-96</span></a>
             <div class="block-phone__action">
               <svg class="icon icon-phone-action">
                 <use xlink:href="svg/symbols.svg#icon-phone-action"></use>
@@ -57,8 +74,8 @@
             </div>
           </div>
         </div>
-        <!-- lang--><a class="link-lang header__lang" href="#">Eng</a>
-        <!-- link button consultation--><a class="link-button header__link-button" href="#"><span class="link-button__icon">
+        <!-- lang-->
+        <!-- link button consultation--><a class="link-button header__link-button" href="#modal-consultation" data-fancybox="modal-consultation"><span class="link-button__icon">
             <svg class="icon icon-link-button">
               <use xlink:href="svg/symbols.svg#icon-link-button"></use>
             </svg></span><span class="link-button__text">Консультация</span></a>
@@ -78,7 +95,7 @@
       <div class="container">
         <h1 class="intro-header intro__header"><span class="intro-header__item intro-header__first-word">De</span><span class="intro-header__item intro-header__second-word">Novo</span><span class="intro-header__item intro-header__third-word">Praxis</span></h1>
         <!-- description-->
-        <div class="intro__description">The art of wealth defence</div>
+        <div class="intro__description animate" data-animate="animContentRightBig 2s 6s both">The art of wealth defence</div>
       </div>
     </section>
     <!-- about-->
@@ -86,14 +103,14 @@
       <div class="container">
         <h2 class="section-header about__section-header">О компании</h2>
         <div class="about__box">
-          <h3 class="section-subheader about__head">Инновационный юридический бутик <span class="section-subheader__name">De Novo Praxis</span></h3>
-          <div class="about__content"> 
-            <p>Искусство защиты благосостояния» - не только слоган нашей компании, но и основа идеологии, вокруг которой мы выстраиваем индивидуальный подход к решению сложных задач в наших профессиональных областях. Мы предлагаем только выверенные решения и многоступенчатые стратегии для достижения наилучшего результата.</p><a href="#">Подробнее о компании</a>
+          <h3 class="section-subheader about__head"> <span class="section-subheader__inner--aninate-top">Инновационный юридический бутик </span><span class="section-subheader__name">De Novo Praxis</span></h3>
+          <div class="about__content">
+            <div class="about__content-text">Искусство защиты благосостояния» - не только слоган нашей компании, но и основа идеологии, вокруг которой мы выстраиваем индивидуальный подход к решению сложных задач в наших профессиональных областях. Мы предлагаем только выверенные решения и многоступенчатые стратегии для достижения наилучшего результата.</div><a class="about__content-link animate" href="#" data-animate="animContentTop 2s 2.5s both">Подробнее о компании</a>
           </div>
         </div>
         <!-- benefits-->
-        <div class="benefits about__benefits">
-          <div class="benefits__item">
+        <div class="benefits about__benefits"> 
+          <div class="benefits__item animate" data-animate="animContentTop 2s 2.2s both">
             <div class="benefits__text-more">Более</div>
             <div class="benefits__data">
               <div class="benefits__data-number">3</div>
@@ -101,7 +118,7 @@
             </div>
             <div class="benefits__content">представляем интересы российских и международных компаний.</div>
           </div>
-          <div class="benefits__item">
+          <div class="benefits__item animate" data-animate="animContentTop 2s 2.4s both">
             <div class="benefits__text-more">Более</div>
             <div class="benefits__data">
               <div class="benefits__data-number">15</div>
@@ -109,7 +126,7 @@
             </div>
             <div class="benefits__content">по праву которых работала наша команда, оказывая услуги своим доверителям.</div>
           </div>
-          <div class="benefits__item">
+          <div class="benefits__item animate" data-animate="animContentTop 2s 2.6s both">
             <div class="benefits__text-more">Более</div>
             <div class="benefits__data">
               <div class="benefits__data-number">10</div>
@@ -117,7 +134,7 @@
             </div>
             <div class="benefits__content">и стратегических сотрудничеств.</div>
           </div>
-          <div class="benefits__item">
+          <div class="benefits__item animate" data-animate="animContentTop 2s 2.8s both">
             <div class="benefits__text-more">Более</div>
             <div class="benefits__data">
               <div class="benefits__data-number">50</div>
@@ -131,18 +148,19 @@
     <!-- practices-->
     <section class="practices">
       <div class="container">
-        <h2 class="section-header practices__section-header">Практики</h2>
+        <h2 class="section-header practices__section-header animate" data-animate="animContentLeft 2s both">Практики</h2>
         <div class="practices__box">
-          <h3 class="section-subheader practices__head"> <span class="section-subheader__color">Инновационные </span>правовые решения</h3>
-          <div class="practices__content"> 
-            <p>Благодаря точечной специализации на особенных практиках, мы не просто оказываем юридические услуги, мы помогаем бизнесу, бенефициарам и семьям владеть и управлять активами, избегать и преодолевать конфликты, сохраняя полную конфиденциальность и оберегая наших клиентов.</p>
+          <h3 class="section-subheader practices__head animate" data-animate="animContentTop 2s 1s both"><span class="section-subheader__color">Инновационные </span>правовые решения</h3>
+          <div class="practices__content">
+            <p class="animate" data-animate="animContentTop 2s 2s both">Благодаря точечной специализации на особенных практиках, мы не просто оказываем юридические услуги, мы помогаем бизнесу, бенефициарам и семьям владеть и управлять активами, избегать и преодолевать конфликты, сохраняя полную конфиденциальность и оберегая наших клиентов.</p>
+            <div class="practices__line animate" data-animate="animContentRightBig 2s 2s both"></div>
           </div>
         </div>
         <!-- slider servises-->
         <div class="practices__servises">
           <div class="slider-servises swiper js-slider-servises">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <div class="swiper-slide animate" data-animate="animContentRight 1s 3.1s both">
                 <div class="slider-servises__item">
                   <div class="slider-servises__number">01</div>
                   <div class="slider-servises__name">Корпоративное право / M&amp;A</div>
@@ -152,7 +170,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide animate" data-animate="animContentRight 1s 3.3s both">
                 <div class="slider-servises__item">
                   <div class="slider-servises__number">02</div>
                   <div class="slider-servises__name">Семейное и наследственное право</div>
@@ -162,7 +180,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide animate" data-animate="animContentRight 1s 3.5s both">
                 <div class="slider-servises__item">
                   <div class="slider-servises__number">03</div>
                   <div class="slider-servises__name">Частные инвестиции</div>
@@ -172,7 +190,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide animate" data-animate="animContentRight 1s 3.7s both">
                 <div class="slider-servises__item">
                   <div class="slider-servises__number">04</div>
                   <div class="slider-servises__name">Конфликты: бизнес и семья</div>
@@ -182,7 +200,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide animate" data-animate="animContentRight 1s 3.9s both">
                 <div class="slider-servises__item">
                   <div class="slider-servises__number">05</div>
                   <div class="slider-servises__name">Искусство и Интеллектуальная собственность</div>
@@ -210,25 +228,26 @@
     <!-- project-->
     <section class="projects">
       <div class="container">
-        <h2 class="section-header projects__section-header">Проекты</h2>
+        <h2 class="section-header projects__section-header animate" data-animate="animContentLeft 2s both">Проекты</h2>
         <div class="projects__box">
           <div class="projects__intro">
-            <h3 class="section-subheader projects__head">Специальные <span class="section-subheader__color">проекты</span></h3>
-            <div class="projects__intro-text">В практике специальных проектов мы объединяем силы команды и опыт специалистов из разных областей. Специальные проекты отличаются комплексностью, социальной, правовой и экономической важностью, а их возникновение может быть продиктовано особенностями текущего правого регулирования. Специальные проекты всегда связаны с нашими основными специализациями и требуют особенного внимания и подхода.</div>
+            <h3 class="section-subheader projects__head animate" data-animate="animContentTop 2s 1s both">Специальные <span class="section-subheader__color">проекты</span></h3>
+            <div class="projects__intro-text animate" data-animate="animContentTop 2s 1s both">В практике специальных проектов мы объединяем силы команды и опыт специалистов из разных областей. Специальные проекты отличаются комплексностью, социальной, правовой и экономической важностью, а их возникновение может быть продиктовано особенностями текущего правого регулирования. Специальные проекты всегда связаны с нашими основными специализациями и требуют особенного внимания и подхода.</div>
+            <div class="projects__intro-line animate" data-animate="animContentLeft 2s 2s both"></div>
           </div>
           <div class="projects__list">
             <div class="list-projects">
-              <div class="list-projects__item">
+              <div class="list-projects__item animate" data-animate="animContentTop 2s 2s both">
                 <div class="list-projects__number">01</div>
                 <div class="list-projects__name">Получение разрешений Правительственной комиссии</div>
                 <div class="list-projects__text">Наша команда имеет все необходимые знания и опыт для качественного сопровождения корпоративных сделок с иностранным участием на всех стадиях процесса: от разработки стратегии сделок до их реализации.</div>
               </div>
-              <div class="list-projects__item">
+              <div class="list-projects__item animate" data-animate="animContentTop 2s 2.2s both">
                 <div class="list-projects__number">02</div>
                 <div class="list-projects__name">Due diligence</div>
                 <div class="list-projects__text">Комплексная проверка юридического статуса и деятельности компании, проводимая перед заключением сделки или принятием важного решения.</div>
               </div>
-              <div class="list-projects__item">
+              <div class="list-projects__item animate" data-animate="animContentTop 2s 2.4s both">
                 <div class="list-projects__number">03</div>
                 <div class="list-projects__name">Pro Bono</div>
                 <div class="list-projects__text">Практика является важной составляющей деятельности любой юридической компании. Она позволяет юристам использовать свои навыки и знания для оказания помощи тем, кто в ней нуждается, независимо от их финансового положения и социального статуса.</div>
@@ -245,8 +264,8 @@
     <!-- team slogan-->
     <section class="team-slogan ">
       <div class="container">
-        <h2 class="section-header team-slogan__section-header">Искусство защиты благосостояния</h2>
-        <h3 class="section-subheader team-slogan__head">Команда, всегда добивающаяся лучших результатов.</h3>
+        <h2 class="section-header team-slogan__section-header"><span class="animate" data-animate="typewriterHeaderTeam 2s both, headerTeamColor 1s 4s both">Искусство защиты </span><span class="animate" data-animate="typewriterHeaderTeam 2s 2s both, headerTeamColor 1s 4s both">благосостояния</span></h2>
+        <h3 class="section-subheader team-slogan__head animate" data-animate="animHeaderTeamTop 3s 4s both">Команда, всегда добивающаяся лучших результатов.</h3>
       </div>
     </section>
     <!-- footer-->
@@ -254,7 +273,7 @@
       <div class="container">
         <div class="footer__row">
           <!-- logo-->
-          <div class="logo footer__logo"><img src="img/img-logo.svg" alt=""/></div>
+          <div class="logo footer__logo"><img src="img/img-logo.svg" alt="" loading="lazy"/></div>
           <!-- nav-->
           <div class="footer__nav">
             <ul class="footer-menu">
@@ -269,7 +288,7 @@
           <div class="footer__data">
             <div class="footer__data-header">Главный офис</div>
             <div class="footer-info">
-              <address class="footer-info__address">199004, г. Санкт-Петербург, вн.тер.г. Муниципальный округ №7, ул. Репина, д. 16/3, литера А, помещ. 1-Н, офис 3</address><a class="footer-info__phone" href="tel:+74959688968">+7 (495) 968-8-968</a><a class="footer-info__email" href="mailto:info@denovopraxis.com">info@denovopraxis.com</a>
+              <address class="footer-info__address">199004, г. Санкт-Петербург, вн.тер.г. Муниципальный округ №7, ул. Репина, д. 16/3, литера А, помещ. 1-Н, офис 3</address><a class="footer-info__phone" href="tel:+74993254496">+7 (499) 325-44-96</a><a class="footer-info__email" href="mailto:info@denovopraxis.com">info@denovopraxis.com</a>
               <div class="footer-messenger footer-info__messenger"> <span class="footer-messenger__text">Написать нам в  </span><a class="footer-messenger__link" href="#"><span class="footer-messenger__link-icon">
                     <svg class="icon icon-phone-messenger-tg">
                       <use xlink:href="svg/symbols.svg#icon-phone-messenger-tg"></use>
@@ -286,6 +305,59 @@
         </div>
       </div>
     </footer>
+    <!-- button-->
+    <div class="button-messenger">
+      <div class="button-messenger-base js-change-state">
+        <svg class="icon icon-button-messenger-ph">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-ph"></use>
+        </svg>
+      </div><a class="button-messenger-item button-messenger-item--whatsapp" href="#">
+        <svg class="icon icon-button-messenger-wh">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-wh"></use>
+        </svg></a><a class="button-messenger-item button-messenger-item--telegram" href="#">
+        <svg class="icon icon-button-messenger-tg">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-tg"></use>
+        </svg></a>
+    </div>
+    <!-- modal-->
+    <div class="modal" id="modal-consultation">
+      <div class="modal__header">Получить консультацию</div>
+      <div class="modal__appeal">
+        <p>Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все вопросы.</p>
+        <p>или напишите нам в <a href="#">Telegram </a>/ <a href="#">Whatsapp</a></p>
+      </div>
+      <!-- form-->
+      <form class="form modal__form" action="#">
+        <div class="form__item">
+          <input class="form__input input-name-js" type="text" name="name" placeholder="Ваше имя"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <div class="form__item">
+          <input class="form__input input-email-js" type="text" name="email" placeholder="E-mail"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <div class="form__item">
+          <input class="form__input input-phone-js" type="text" name="phone" placeholder="Номер телефона"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <button class="form__submit submit-js" type="submit"><span class="form__submit-icon">
+            <svg class="icon icon-link-button">
+              <use xlink:href="svg/symbols.svg#icon-link-button"></use>
+            </svg></span><span class="form__submit-text">Оставить заявку</span></button>
+        <div class="form__add">Отправляя данную форму вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></div>
+      </form>
+    </div>
+    <!-- modal-->
+    <div class="modal modal--thanks" id="modal-thanks">
+      <div class="modal__header">Спасибо. <br/> Ваша заявка принята!</div>
+      <div class="modal__appeal"> 
+        <p>Вернитесь на главную или воспользуйтесь навигацией сайта.</p>
+      </div>
+      <!-- link home--><a class="link-button link-button--small-full modal__link-button" href="#"><span class="link-button__icon">
+          <svg class="icon icon-link-button">
+            <use xlink:href="svg/symbols.svg#icon-link-button"></use>
+          </svg></span><span class="link-button__text">На главную</span></a>
+    </div>
     <!-- scripts-->
     <script src="js/vendor.js" defer></script>
     <script src="js/common.js" defer></script>

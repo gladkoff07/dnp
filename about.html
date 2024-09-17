@@ -10,20 +10,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body>
+    <!-- preloader-->
+    <div class="preloader">
+      <div class="preloader__logo"><img src="img/img-logo-preloader.svg" alt=""/></div>
+      <div class="preloader__slogan">«Искусство защиты благосостояния»</div>
+    </div>
     <!-- menu-mobile-->
     <div class="menu-mobile">
-      <div class="menu-mobile__head"><img src="img/img-logo.svg" alt=""/>
-        <div class="menu-mobile__head-action">
-          <svg class="icon icon-phone">
-            <use xlink:href="svg/symbols.svg#icon-phone"></use>
-          </svg>
-          <svg class="icon icon-menu-close">
-            <use xlink:href="svg/symbols.svg#icon-menu-close"></use>
-          </svg>
-        </div>
+      <div class="menu-mobile__head">
+        <div class="menu-mobile__logo"><img src="img/img-logo.svg" alt=""/></div>
+        <div class="menu-mobile__head-action"><a class="menu-mobile__link" href="tel:+75855697525">
+            <svg class="icon icon-phone">
+              <use xlink:href="svg/symbols.svg#icon-phone"></use>
+            </svg></a><a class="menu-mobile__link js-menu-close" href="#">
+            <svg class="icon icon-menu-close">
+              <use xlink:href="svg/symbols.svg#icon-menu-close"></use>
+            </svg></a></div>
       </div>
       <div class="menu-mobile__nav"></div>
-      <div class="menu-mobile__info"></div>
+      <div class="mobile-info menu-mobile__info">
+        <div class="mobile-info__item">
+          <div class="mobile-info__item-header">Телефон:</div><a class="mobile-info__phone" href="tel:+79939730105">+ 7 993 973 0105</a>
+          <div class="mobile-info__line">Написать в <a class="mobile-info__link" href="#">Telegram</a></div>
+          <div class="mobile-info__line">Написать в <a class="mobile-info__link" href="#">WhatsApp</a></div>
+        </div>
+        <div class="mobile-info__item">
+          <div class="mobile-info__item-header">E-mail:</div><a class="mobile-info__email" href="mailto:info@praxis.com">info@praxis.com</a>
+        </div>
+      </div>
     </div>
     <!-- header-->
     <header class="header section">
@@ -35,7 +49,10 @@
         </nav>
         <!-- block phone-->
         <div class="block-phone header__block-phone">
-          <div class="block-phone__nav js-phone-action"><a class="block-phone__number" href="tel:+75855697525">+7 (585) 569-75-25</a>
+          <div class="block-phone__nav js-phone-action"><a class="block-phone__number" href="tel:+74993254496"><span class="block-phone__number-icon">
+                <svg class="icon icon-phone">
+                  <use xlink:href="svg/symbols.svg#icon-phone"></use>
+                </svg></span><span class="block-phone__number-text">+7 (499) 325-44-96</span></a>
             <div class="block-phone__action">
               <svg class="icon icon-phone-action">
                 <use xlink:href="svg/symbols.svg#icon-phone-action"></use>
@@ -57,8 +74,8 @@
             </div>
           </div>
         </div>
-        <!-- lang--><a class="link-lang header__lang" href="#">Eng</a>
-        <!-- link button consultation--><a class="link-button header__link-button" href="#"><span class="link-button__icon">
+        <!-- lang-->
+        <!-- link button consultation--><a class="link-button header__link-button" href="#modal-consultation" data-fancybox="modal-consultation"><span class="link-button__icon">
             <svg class="icon icon-link-button">
               <use xlink:href="svg/symbols.svg#icon-link-button"></use>
             </svg></span><span class="link-button__text">Консультация</span></a>
@@ -96,8 +113,8 @@
             </div>
           </div>
           <!-- benefits-->
-          <div class="benefits about-info__benefits">
-            <div class="benefits__item">
+          <div class="benefits about-info__benefits"> 
+            <div class="benefits__item animate" data-animate="animContentTop 2s 2.2s both">
               <div class="benefits__text-more">Более</div>
               <div class="benefits__data">
                 <div class="benefits__data-number">3</div>
@@ -105,7 +122,7 @@
               </div>
               <div class="benefits__content">представляем интересы российских и международных компаний.</div>
             </div>
-            <div class="benefits__item">
+            <div class="benefits__item animate" data-animate="animContentTop 2s 2.4s both">
               <div class="benefits__text-more">Более</div>
               <div class="benefits__data">
                 <div class="benefits__data-number">15</div>
@@ -113,7 +130,7 @@
               </div>
               <div class="benefits__content">по праву которых работала наша команда, оказывая услуги своим доверителям.</div>
             </div>
-            <div class="benefits__item">
+            <div class="benefits__item animate" data-animate="animContentTop 2s 2.6s both">
               <div class="benefits__text-more">Более</div>
               <div class="benefits__data">
                 <div class="benefits__data-number">10</div>
@@ -121,7 +138,7 @@
               </div>
               <div class="benefits__content">и стратегических сотрудничеств.</div>
             </div>
-            <div class="benefits__item">
+            <div class="benefits__item animate" data-animate="animContentTop 2s 2.8s both">
               <div class="benefits__text-more">Более</div>
               <div class="benefits__data">
                 <div class="benefits__data-number">50</div>
@@ -180,9 +197,14 @@
         <!-- list team-->
         <div class="list-team our-team__list">
           <div class="list-team__item">
-            <picture class="list-team__img">
-              <source srcset="img/img-list-team-first.webp 1x, img/img-list-team-first--@2x.webp 2x" type="image/webp"><img src="img/img-list-team-first.webp" type="image/webp">
-            </picture>
+            <div class="list-team__img">
+              <picture class="list-team__picture list-team__picture--first">
+                <source srcset="img/img-list-team-first-2.webp 1x, img/img-list-team-first-2--@2x.webp 2x" type="image/webp"><img src="img/img-list-team-first-2.webp" type="image/webp" loading="lazy">
+              </picture>
+              <picture class="list-team__picture list-team__picture--second">
+                <source srcset="img/img-list-team-first-1.webp 1x, img/img-list-team-first-1--@2x.webp 2x" type="image/webp"><img src="img/img-list-team-first-1.webp" type="image/webp" loading="lazy">
+              </picture>
+            </div>
             <div class="list-team__content">
               <div class="list-team__content-subheader">Управляющий партнер</div>
               <div class="list-team__name">Куревлева Вероника</div>
@@ -199,12 +221,17 @@
             </div>
           </div>
           <div class="list-team__item list-team__item--reverse">
-            <picture class="list-team__img">
-              <source srcset="img/img-list-team-second.webp 1x, img/img-list-team-second--@2x.webp 2x" type="image/webp"><img src="img/img-list-team-second.webp" type="image/webp">
-            </picture>
+            <div class="list-team__img">
+              <picture class="list-team__picture list-team__picture--first">
+                <source srcset="img/img-list-team-second-2.webp 1x, img/img-list-team-second-2--@2x.webp 2x" type="image/webp"><img src="img/img-list-team-second-2.webp" type="image/webp" loading="lazy">
+              </picture>
+              <picture class="list-team__picture list-team__picture--second">
+                <source srcset="img/img-list-team-second-1.webp 1x, img/img-list-team-second-1--@2x.webp 2x" type="image/webp"><img src="img/img-list-team-second-1.webp" type="image/webp" loading="lazy">
+              </picture>
+            </div>
             <div class="list-team__content">
               <div class="list-team__content-subheader">Руководитель практики Корпоративное право/ M&A</div>
-              <div class="list-team__name">Меньшова Полина</div>
+              <div class="list-team__name">Меньшикова Полина</div>
               <div class="list-team__content-subheader">Образование:</div>
               <ul>
                 <li>Бакалавр Санкт-Петербургского государственного экономического университета по направлению «Юриспруденция», диплом с отличием.</li>
@@ -231,7 +258,7 @@
       <div class="container">
         <div class="footer__row">
           <!-- logo-->
-          <div class="logo footer__logo"><img src="img/img-logo.svg" alt=""/></div>
+          <div class="logo footer__logo"><img src="img/img-logo.svg" alt="" loading="lazy"/></div>
           <!-- nav-->
           <div class="footer__nav">
             <ul class="footer-menu">
@@ -246,7 +273,7 @@
           <div class="footer__data">
             <div class="footer__data-header">Главный офис</div>
             <div class="footer-info">
-              <address class="footer-info__address">199004, г. Санкт-Петербург, вн.тер.г. Муниципальный округ №7, ул. Репина, д. 16/3, литера А, помещ. 1-Н, офис 3</address><a class="footer-info__phone" href="tel:+74959688968">+7 (495) 968-8-968</a><a class="footer-info__email" href="mailto:info@denovopraxis.com">info@denovopraxis.com</a>
+              <address class="footer-info__address">199004, г. Санкт-Петербург, вн.тер.г. Муниципальный округ №7, ул. Репина, д. 16/3, литера А, помещ. 1-Н, офис 3</address><a class="footer-info__phone" href="tel:+74993254496">+7 (499) 325-44-96</a><a class="footer-info__email" href="mailto:info@denovopraxis.com">info@denovopraxis.com</a>
               <div class="footer-messenger footer-info__messenger"> <span class="footer-messenger__text">Написать нам в  </span><a class="footer-messenger__link" href="#"><span class="footer-messenger__link-icon">
                     <svg class="icon icon-phone-messenger-tg">
                       <use xlink:href="svg/symbols.svg#icon-phone-messenger-tg"></use>
@@ -263,6 +290,59 @@
         </div>
       </div>
     </footer>
+    <!-- button-->
+    <div class="button-messenger">
+      <div class="button-messenger-base js-change-state">
+        <svg class="icon icon-button-messenger-ph">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-ph"></use>
+        </svg>
+      </div><a class="button-messenger-item button-messenger-item--whatsapp" href="#">
+        <svg class="icon icon-button-messenger-wh">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-wh"></use>
+        </svg></a><a class="button-messenger-item button-messenger-item--telegram" href="#">
+        <svg class="icon icon-button-messenger-tg">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-tg"></use>
+        </svg></a>
+    </div>
+    <!-- modal-->
+    <div class="modal" id="modal-consultation">
+      <div class="modal__header">Получить консультацию</div>
+      <div class="modal__appeal">
+        <p>Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все вопросы.</p>
+        <p>или напишите нам в <a href="#">Telegram </a>/ <a href="#">Whatsapp</a></p>
+      </div>
+      <!-- form-->
+      <form class="form modal__form" action="#">
+        <div class="form__item">
+          <input class="form__input input-name-js" type="text" name="name" placeholder="Ваше имя"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <div class="form__item">
+          <input class="form__input input-email-js" type="text" name="email" placeholder="E-mail"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <div class="form__item">
+          <input class="form__input input-phone-js" type="text" name="phone" placeholder="Номер телефона"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <button class="form__submit submit-js" type="submit"><span class="form__submit-icon">
+            <svg class="icon icon-link-button">
+              <use xlink:href="svg/symbols.svg#icon-link-button"></use>
+            </svg></span><span class="form__submit-text">Оставить заявку</span></button>
+        <div class="form__add">Отправляя данную форму вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></div>
+      </form>
+    </div>
+    <!-- modal-->
+    <div class="modal modal--thanks" id="modal-thanks">
+      <div class="modal__header">Спасибо. <br/> Ваша заявка принята!</div>
+      <div class="modal__appeal"> 
+        <p>Вернитесь на главную или воспользуйтесь навигацией сайта.</p>
+      </div>
+      <!-- link home--><a class="link-button link-button--small-full modal__link-button" href="#"><span class="link-button__icon">
+          <svg class="icon icon-link-button">
+            <use xlink:href="svg/symbols.svg#icon-link-button"></use>
+          </svg></span><span class="link-button__text">На главную</span></a>
+    </div>
     <!-- scripts-->
     <script src="js/vendor.js" defer></script>
     <script src="js/common.js" defer></script>

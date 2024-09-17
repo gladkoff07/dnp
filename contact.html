@@ -10,20 +10,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body>
+    <!-- preloader-->
+    <div class="preloader">
+      <div class="preloader__logo"><img src="img/img-logo-preloader.svg" alt=""/></div>
+      <div class="preloader__slogan">«Искусство защиты благосостояния»</div>
+    </div>
     <!-- menu-mobile-->
     <div class="menu-mobile">
-      <div class="menu-mobile__head"><img src="img/img-logo.svg" alt=""/>
-        <div class="menu-mobile__head-action">
-          <svg class="icon icon-phone">
-            <use xlink:href="svg/symbols.svg#icon-phone"></use>
-          </svg>
-          <svg class="icon icon-menu-close">
-            <use xlink:href="svg/symbols.svg#icon-menu-close"></use>
-          </svg>
-        </div>
+      <div class="menu-mobile__head">
+        <div class="menu-mobile__logo"><img src="img/img-logo.svg" alt=""/></div>
+        <div class="menu-mobile__head-action"><a class="menu-mobile__link" href="tel:+75855697525">
+            <svg class="icon icon-phone">
+              <use xlink:href="svg/symbols.svg#icon-phone"></use>
+            </svg></a><a class="menu-mobile__link js-menu-close" href="#">
+            <svg class="icon icon-menu-close">
+              <use xlink:href="svg/symbols.svg#icon-menu-close"></use>
+            </svg></a></div>
       </div>
       <div class="menu-mobile__nav"></div>
-      <div class="menu-mobile__info"></div>
+      <div class="mobile-info menu-mobile__info">
+        <div class="mobile-info__item">
+          <div class="mobile-info__item-header">Телефон:</div><a class="mobile-info__phone" href="tel:+79939730105">+ 7 993 973 0105</a>
+          <div class="mobile-info__line">Написать в <a class="mobile-info__link" href="#">Telegram</a></div>
+          <div class="mobile-info__line">Написать в <a class="mobile-info__link" href="#">WhatsApp</a></div>
+        </div>
+        <div class="mobile-info__item">
+          <div class="mobile-info__item-header">E-mail:</div><a class="mobile-info__email" href="mailto:info@praxis.com">info@praxis.com</a>
+        </div>
+      </div>
     </div>
     <!-- header-->
     <header class="header section">
@@ -35,7 +49,10 @@
         </nav>
         <!-- block phone-->
         <div class="block-phone header__block-phone">
-          <div class="block-phone__nav js-phone-action"><a class="block-phone__number" href="tel:+75855697525">+7 (585) 569-75-25</a>
+          <div class="block-phone__nav js-phone-action"><a class="block-phone__number" href="tel:+74993254496"><span class="block-phone__number-icon">
+                <svg class="icon icon-phone">
+                  <use xlink:href="svg/symbols.svg#icon-phone"></use>
+                </svg></span><span class="block-phone__number-text">+7 (499) 325-44-96</span></a>
             <div class="block-phone__action">
               <svg class="icon icon-phone-action">
                 <use xlink:href="svg/symbols.svg#icon-phone-action"></use>
@@ -57,8 +74,8 @@
             </div>
           </div>
         </div>
-        <!-- lang--><a class="link-lang header__lang" href="#">Eng</a>
-        <!-- link button consultation--><a class="link-button header__link-button" href="#"><span class="link-button__icon">
+        <!-- lang-->
+        <!-- link button consultation--><a class="link-button header__link-button" href="#modal-consultation" data-fancybox="modal-consultation"><span class="link-button__icon">
             <svg class="icon icon-link-button">
               <use xlink:href="svg/symbols.svg#icon-link-button"></use>
             </svg></span><span class="link-button__text">Консультация</span></a>
@@ -89,7 +106,7 @@
             <address class="contact-info__address">199004, г. Санкт-Петербург, вн.тер.г. Муниципальный округ №7, ул. Репина, д. 16/3, литера А, помещ. 1-Н, офис 3</address>
           </div>
           <div class="contact-info__item">
-            <div class="contact-info__item-header">Телефон:</div><a class="contact-info__phone" href="tel:+79939730105">+7 993 973 0105</a>
+            <div class="contact-info__item-header">Телефон:</div><a class="contact-info__phone" href="tel:+74993254496">+7 499 325 44 96</a>
             <div class="contact-info__messenger">Написать нам в <a class="contact-info__messenger-link" href="#">Telegram </a>/ <a class="contact-info__messenger-link" href="#">Whatsapp</a></div>
           </div>
           <div class="contact-info__item">
@@ -99,12 +116,14 @@
       </div>
     </main>
     <!-- maps-->
-    <div class="wrapper-map section"><img src="img/img-map.webp" alt=""></div>
+    <div class="wrapper-map section">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A503cebca9ec553d7ec09d963d3777425d0bd659d70ffe2864b3cf05dcbc5b5b0&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
     <!-- team slogan-->
     <section class="team-slogan team-slogan--inner">
       <div class="container">
-        <h2 class="section-header team-slogan__section-header">Искусство защиты благосостояния</h2>
-        <h3 class="section-subheader team-slogan__head">Команда, всегда добивающаяся лучших результатов.</h3>
+        <h2 class="section-header team-slogan__section-header"><span class="animate" data-animate="typewriterHeaderTeam 2s both, headerTeamColor 1s 4s both">Искусство защиты </span><span class="animate" data-animate="typewriterHeaderTeam 2s 2s both, headerTeamColor 1s 4s both">благосостояния</span></h2>
+        <h3 class="section-subheader team-slogan__head animate" data-animate="animHeaderTeamTop 3s 4s both">Команда, всегда добивающаяся лучших результатов.</h3>
       </div>
     </section>
     <!-- footer-->
@@ -112,7 +131,7 @@
       <div class="container">
         <div class="footer__row">
           <!-- logo-->
-          <div class="logo footer__logo"><img src="img/img-logo.svg" alt=""/></div>
+          <div class="logo footer__logo"><img src="img/img-logo.svg" alt="" loading="lazy"/></div>
           <!-- nav-->
           <div class="footer__nav">
             <ul class="footer-menu">
@@ -127,7 +146,7 @@
           <div class="footer__data">
             <div class="footer__data-header">Главный офис</div>
             <div class="footer-info">
-              <address class="footer-info__address">199004, г. Санкт-Петербург, вн.тер.г. Муниципальный округ №7, ул. Репина, д. 16/3, литера А, помещ. 1-Н, офис 3</address><a class="footer-info__phone" href="tel:+74959688968">+7 (495) 968-8-968</a><a class="footer-info__email" href="mailto:info@denovopraxis.com">info@denovopraxis.com</a>
+              <address class="footer-info__address">199004, г. Санкт-Петербург, вн.тер.г. Муниципальный округ №7, ул. Репина, д. 16/3, литера А, помещ. 1-Н, офис 3</address><a class="footer-info__phone" href="tel:+74993254496">+7 (499) 325-44-96</a><a class="footer-info__email" href="mailto:info@denovopraxis.com">info@denovopraxis.com</a>
               <div class="footer-messenger footer-info__messenger"> <span class="footer-messenger__text">Написать нам в  </span><a class="footer-messenger__link" href="#"><span class="footer-messenger__link-icon">
                     <svg class="icon icon-phone-messenger-tg">
                       <use xlink:href="svg/symbols.svg#icon-phone-messenger-tg"></use>
@@ -144,6 +163,59 @@
         </div>
       </div>
     </footer>
+    <!-- button-->
+    <div class="button-messenger">
+      <div class="button-messenger-base js-change-state">
+        <svg class="icon icon-button-messenger-ph">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-ph"></use>
+        </svg>
+      </div><a class="button-messenger-item button-messenger-item--whatsapp" href="#">
+        <svg class="icon icon-button-messenger-wh">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-wh"></use>
+        </svg></a><a class="button-messenger-item button-messenger-item--telegram" href="#">
+        <svg class="icon icon-button-messenger-tg">
+          <use xlink:href="svg/symbols.svg#icon-button-messenger-tg"></use>
+        </svg></a>
+    </div>
+    <!-- modal-->
+    <div class="modal" id="modal-consultation">
+      <div class="modal__header">Получить консультацию</div>
+      <div class="modal__appeal">
+        <p>Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все вопросы.</p>
+        <p>или напишите нам в <a href="#">Telegram </a>/ <a href="#">Whatsapp</a></p>
+      </div>
+      <!-- form-->
+      <form class="form modal__form" action="#">
+        <div class="form__item">
+          <input class="form__input input-name-js" type="text" name="name" placeholder="Ваше имя"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <div class="form__item">
+          <input class="form__input input-email-js" type="text" name="email" placeholder="E-mail"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <div class="form__item">
+          <input class="form__input input-phone-js" type="text" name="phone" placeholder="Номер телефона"/>
+          <div class="form__error">*это поле обязательно к заполнению</div>
+        </div>
+        <button class="form__submit submit-js" type="submit"><span class="form__submit-icon">
+            <svg class="icon icon-link-button">
+              <use xlink:href="svg/symbols.svg#icon-link-button"></use>
+            </svg></span><span class="form__submit-text">Оставить заявку</span></button>
+        <div class="form__add">Отправляя данную форму вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></div>
+      </form>
+    </div>
+    <!-- modal-->
+    <div class="modal modal--thanks" id="modal-thanks">
+      <div class="modal__header">Спасибо. <br/> Ваша заявка принята!</div>
+      <div class="modal__appeal"> 
+        <p>Вернитесь на главную или воспользуйтесь навигацией сайта.</p>
+      </div>
+      <!-- link home--><a class="link-button link-button--small-full modal__link-button" href="#"><span class="link-button__icon">
+          <svg class="icon icon-link-button">
+            <use xlink:href="svg/symbols.svg#icon-link-button"></use>
+          </svg></span><span class="link-button__text">На главную</span></a>
+    </div>
     <!-- scripts-->
     <script src="js/vendor.js" defer></script>
     <script src="js/common.js" defer></script>
